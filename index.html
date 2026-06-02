@@ -23,7 +23,7 @@ const ctx = canvas.getContext("2d");
 
 let snake = [{x:200,y:200}];
 let food = {x:100,y:100};
-let dx = 20;
+let dx = 0;
 let dy = 0;
 let score = 0;
 
@@ -63,8 +63,14 @@ function draw(){
     snake.unshift(head);
 
     if(head.x<0 || head.y<0 || head.x>=400 || head.y>=400){
-        alert("Game Over! Score: "+score);
-        location.reload();
+        alert("Game Over! Score: " + score);
+
+snake = [{x:200,y:200}];
+food = {x:100,y:100};
+dx = 0;
+dy = 0;
+score = 0;
+        
     }
 
     document.title="Score: "+score;
