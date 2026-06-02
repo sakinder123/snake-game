@@ -72,5 +72,25 @@ function draw(){
 
 setInterval(draw,100);
 </script>
-</body>
+</body><div style="margin-top:20px;">
+    <button onclick="up()">⬆️</button><br><br>
+    <button onclick="left()">⬅️</button>
+    <button onclick="down()">⬇️</button>
+    <button onclick="right()">➡️</button>
+</div>
+
+<script>
+function up(){
+    if(dy===0){dx=0;dy=-20;}
+}
+function down(){
+    if(dy===0){dx=0;dy=20;}
+}
+function left(){
+    if(dx===0){dx=-20;dy=0;}
+}
+function right(){
+    if(dx===0){dx=20;dy=0;}
+}
+</script>
 </html>
